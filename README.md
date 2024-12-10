@@ -11,7 +11,7 @@ On first booting into shimboot, you'll want to do a few things:
 - Run `sudo apt update` and `sudo apt upgrade` on first boot too, and periodically as well, or before you install something new. **This is especially important if you want to switch the desktop environment, since it will fail unless you have ran these two commands before running `sudo tasksel`.**
 - Function keys are not mapped properly by default. I believe https://github.com/WeirdTreeThing/cros-keyboard-map can fix this, but I'm not entirely sure. You can also mess around with the shortcuts in settings to suit your preferences.
 - In power management (or just power settings in general), change all settings that say "Suspend" to "Lock Screen", unless you want your computer to shut down after a light press of the power button or closing of the lid. Suspend is not supposed to shut down a Linux system, but it doesn't work on shimboot universally (see official shimboot github README).
-- Also, chromebooks will restart with `power + refresh`. Avoid using this, as this may cause data corruption (also from ading2210).
+- Also, chromebooks will restart with `power + refresh`. Avoid using this, as this may cause data corruption (also from ading2210). Instead, use linux's system shutdown functionality.
 - On first boot, also remember to connect to a wifi network.
 
 ## How to boot into shimboot after shutting down?
