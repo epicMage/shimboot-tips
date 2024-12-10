@@ -62,6 +62,7 @@ sudo dd if=/path/to/shimboot.bin of=/dev/sd* oflag=direct bs=1M status=progress
 ```
 
 ...replacing `/path/to/shimboot.bin` with the path to your shimboot file and `/dev/sd*` with your drive name (usually `/dev/sdb`).
+
 Important: the file should be the `.bin` file, not the `.zip` file. Extract the `.zip` file first.
 
 Wait for it to finish flashing the image, afterwards, run `sync` and then unplug the drive and you're free to start booting another shimboot off of it!
