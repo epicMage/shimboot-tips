@@ -70,3 +70,5 @@ sudo dd if=/path/to/shimboot.bin of=/dev/sd* oflag=direct bs=1M status=progress
 Important: the file should be the `.bin` file, not the `.zip` file. Extract the `.zip` file first.
 
 Wait for it to finish flashing the image, afterwards, run `sync` and then unplug the drive and you're free to start booting another shimboot off of it!
+
+`dd` can also be used to create various other sorts of bootable drives (like shimboot) in this fashion. You just have to replace the path to shimboot file with the proper image that you want to burn onto the flash drive.
