@@ -41,7 +41,7 @@ Do keep in mind that different desktop environments use different amounts of res
 Also, ading2210 recommends you install SSH server and laptop on first boot as well.
 
 ## My chromebook battery is draining faster!
-Yeah that'll happen. There is no 100% workaround to this, but you can install TLP, which is a convenient battery manager for linux in general, and it has significantly improved my battery usage. Also, firefox and chrome in general are quite bad in terms of ram usage, I have found Midori (a more CPU and memory efficient firefox fork) to be quite good for my system. 
+Yeah that'll happen. There is no 100% workaround to this, but you can install TLP, which is a convenient battery manager for linux in general, and it has significantly improved my battery usage. Also, firefox and chrome in general are quite bad in terms of ram usage. Find what works for you honestly.
 
 To install tlp, run `sudo apt install tlp tlp-rdw` and then reboot your system.
 
