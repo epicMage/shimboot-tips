@@ -24,7 +24,7 @@ There are a few caveats to this, although it is possible. ~~First is playing the
 
 If it is greater, simply follow the instructions here: https://sober.vinegarhq.org/
 
-If you run into an issue like [this](https://github.com/flatpak/flatpak/issues/5944), then simply the solution I posted at the bottom. If you run into a different error I can't really help you. 
+If you run into an issue like [this](https://github.com/flatpak/flatpak/issues/5944), then simply use the solution I posted at the bottom of the message chain. If you run into a different error I can't really help you. 
 
 ## How can I upgrade my kernel version to play Roblox to play DTI and adopt me with my friends?
 You can't upgrade your kernel version, sorry. No buts, no exceptions. If you go ask ading2210, you'll get the same answer.
@@ -48,7 +48,11 @@ To install tlp, run `sudo apt install tlp tlp-rdw` and then reboot your system.
 You can also use `pm-powersave`, which is included in the `pm-utils` package. Run `sudo apt install pm-utils` to install and then run `sudo powersave true` to turn on power saving mode. To turn off, run the command again but replace `true` with `false`.
 
 ## How do I install applications?
-You can run .appimage files or .deb files. Per the Debian wiki, it is best to avoid running .rpm files on Debian distros. See https://wiki.debian.org/RPM. To install .deb files, run `sudo apt install /path/to/deb/file.deb` and replace the last part with the path to the deb file. AppImage files are a bit weirder, you first have to go to terminal and run `chmod +x /path/to/app.appimage` and then double click the appimage file in file explorer.
+You can run .appimage files or .deb files. Per the Debian wiki, it is best to avoid running .rpm files on Debian distros. See https://wiki.debian.org/RPM. 
+
+To install .deb files, run `sudo apt install /path/to/deb/file.deb` and replace the last part with the path to the deb file.
+
+AppImage files are a bit weirder, you first have to go to terminal and run `chmod +x /path/to/app.appimage` and then double click the appimage file in file explorer.
 
 ## Can I use shimboot to create other shimboots?
 Yes, surprisingly, you can. Depending on your chromebook, you will need more than one usb port for this. You can buy a decent hub like this (it's the one I use and it works great): https://a.co/d/dGgS93k. If your chromebook has 2 or more usb ports, you can ignore this.
