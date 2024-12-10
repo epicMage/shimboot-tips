@@ -24,7 +24,9 @@ There are a few caveats to this, although it is possible. ~~First is playing the
 
 If it is greater, simply follow the instructions here: https://sober.vinegarhq.org/
 
-If you run into an issue like [this](https://github.com/flatpak/flatpak/issues/5944), then simply use the solution I posted at the bottom of the message chain. If you run into a different error I can't really help you. 
+If you run into an issue like [this](https://github.com/flatpak/flatpak/issues/5944), then simply use the solution I posted at the bottom of the message chain. 
+
+**Note: I have not tested the validity of this program beyond this point. If you run into some other error and you have done all of the above, it might not be possible to run Roblox on shimboot after all. If it doesn't work, I don't have a fix.**
 
 ## How can I upgrade my kernel version to play Roblox to play DTI and adopt me with my friends?
 You can't upgrade your kernel version, sorry. No buts, no exceptions. If you go ask ading2210, you'll get the same answer.
