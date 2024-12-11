@@ -39,6 +39,8 @@ There are a lot of vpn configurations out there, but I would recommend ProtonVPN
 ## How do I make shimboot not look so primitive?
 Shimboot is not primitive, its the latest version of Debian linux running on your chromebook. It's just the *desktop environment*, or in other words the UI. You can run `sudo tasksel` to configure the desktop environment. Use arrow keys to navigate the CLI, space bar to select/deselect option, tab to switch to the confirm button, then press enter. Restart for changes to take effect.
 
+Note: before restarting, run `sudo autoremove xfce4*` to make the desktop environment you selected to be the default one.
+
 If you do select an option like Cinnamon, or GNOME, make sure you only have one of those options selected. For example, the default is XFCE, but if you want to switch to MATE, then deselect XFCE (press space on it) and use arrow keys to get to MATE and select it. 
 Do keep in mind that different desktop environments use different amounts of resources. GNOME is a very user friendly and UI-rich desktop environment, but it's generally quite slow. XFCE is the default, and it looks very basic, but it's faster. I personally use Cinnamon, which has a windows-looking UI and is somewhere in between in terms of performance.
 
@@ -47,7 +49,7 @@ Also, ading2210 recommends you install SSH server and laptop on first boot as we
 ## My chromebook battery is draining faster!
 Yeah that'll happen. You can install TLP, which is a convenient battery manager for linux in general, and it has significantly improved my battery usage. Also, firefox and chrome in general are quite bad in terms of ram usage. Find what works for you honestly.
 
-To install tlp, run `sudo apt install tlp tlp-rdw` and then reboot your system.
+To install tlp, run `sudo apt install tlp tlp-rdw` and then run `sudo tlp start`.
 
 There is a 100% workaround, per ading2210, who told me that throttling the cpu (via the use of https://github.com/vagnum08/cpupower-gui) is the way to go. I haven't tried it, but if the developer says it works, it probably works. It obviously has performance implications as well, though.
 
