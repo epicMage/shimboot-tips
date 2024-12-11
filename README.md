@@ -49,8 +49,6 @@ Yeah that'll happen. You can install TLP, which is a convenient battery manager 
 
 To install tlp, run `sudo apt install tlp tlp-rdw` and then reboot your system.
 
-You can also use `pm-powersave`, which is included in the `pm-utils` package. Run `sudo apt install pm-utils` to install and then run `sudo powersave true` to turn on power saving mode. To turn off, run the command again but replace `true` with `false`.
-
 There is a 100% workaround, per ading2210, who told me that throttling the cpu (via the use of https://github.com/vagnum08/cpupower-gui) is the way to go. I haven't tried it, but if the developer says it works, it probably works. It obviously has performance implications as well, though.
 
 ## How do I install applications?
