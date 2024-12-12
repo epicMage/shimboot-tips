@@ -1,6 +1,8 @@
 # Shimboot Tips 
 Shimboot is a super easy exploit to do, and the benefits are endless, but let's just say Linux is not the easiest of operating systems to work with. I used to have no idea how to work a Debian 12 distro when I first started but I've managed to make everything work up until now. Here are a few things that I learned along my way that I found helpful and wish I had knew when I first started using shimboot.
 
+Note: Please read and follow the instructions. I assume you have a pair of eyes while reading this. Nothing is more frustrating than a user asking a question that is so explicitly answered in the guide. So if you have a question, check the guide again, make sure you have followed all the proper steps, and if finally you find that something doesn't work you can post it in the issues on this repository or go to this discord run by ading2210: https://discord.gg/vddDp326Vs
+
 ## Read the official README
 Trust me, it helps a lot. It might be confusing at first but its really not that hard. **Just follow the steps in the video/readme and you should be set. Also, a lot of frequently asked questions are probably covered in the official github's FAQ section of the readme.** Definitely watch the video posted on the readme as well, super helpful.
 https://github.com/ading2210/shimboot
