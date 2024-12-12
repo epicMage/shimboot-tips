@@ -36,7 +36,11 @@ If you run into an issue like [this](https://github.com/flatpak/flatpak/issues/5
 You can't upgrade your kernel version, sorry. No buts, no exceptions. If you go ask ading2210, you'll get the same answer.
 
 ## How to install VPN?
-There are a lot of vpn configurations out there, but I would recommend ProtonVPN because it's decent and it's free. There are two ways you can do this: download the official app, or use openvpn configuration. I ran into issues using the official app, while the OpenVPN config works just fine. Follow these instructions to obtain ProtonVPN on shimboot (assumes you already have an account setup, so do that first): https://protonvpn.com/support/linux-openvpn/
+There are a lot of vpn configurations out there, but I would recommend ProtonVPN because it's decent and it's free. There are two ways you can do this: download the official app, or use OpenVPN configuration. I ran into issues using the official app, while the OpenVPN config works just fine. 
+
+Follow these instructions to obtain ProtonVPN on shimboot (assumes you already have an account setup, so do that first): https://protonvpn.com/support/linux-openvpn/
+
+These instructions are for using OpenVPN file configuration. You can try the official app, it may or may not work for you.
 
 ## How do I make shimboot not look so primitive?
 Shimboot is not primitive, its the latest version of Debian linux running on your chromebook. It's just the *desktop environment*, or in other words the UI. You can run `sudo tasksel` to configure the desktop environment. Use arrow keys to navigate the CLI, space bar to select/deselect option, tab to switch to the confirm button, then press enter. Restart for changes to take effect.
