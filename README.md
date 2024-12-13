@@ -70,7 +70,7 @@ AppImage files are a bit weirder, you first have to go to terminal and run `chmo
 ## Can I use shimboot to create other shimboots?
 Yes, surprisingly, you can. Depending on your chromebook, you will need more than one usb port for this. You can buy a decent hub like this (it's the one I use and it works great): https://a.co/d/dGgS93k. If your chromebook has 2 or more usb ports, you can ignore this.
 
-Once you have shimboot loaded, open terminal and plug in your other flash drive as well. Run `sudo fdisk -l` to see the list of disks plugged in. `/dev/sda` is your shimboot disk and you don't want to be messing with that, so remember to not use that. The last thing you need is to overwrite your own shimboot disk. If you only have one drive plugged in (one drive NOT counting your shimboot drive), it will be `/dev/sdb`. 
+Once you have shimboot loaded, open terminal and plug in your other flash drive as well. Run `sudo fdisk -l` to see the list of disks plugged in. `/dev/sda` is your shimboot disk and you don't want to be messing with that, so remember to not use that. One thing you probably don't want is to overwrite your current shimboot drive. If you only have one drive plugged in (one drive NOT counting your shimboot drive), it will be `/dev/sdb`. 
 
 Once you have your drive figured out, obtain the appropriate shimboot image (see the official github on figuring out what image you need), whether that be by downloading the image from the official github and unzipping it, or by building the image yourself. Then, run this command:
 
