@@ -27,7 +27,7 @@ Yes, just follow the steps to get to the part where you plug in the flash drive.
 Note that booting up in developer mode causes all local data on your chromebook to be lost, so if it is someone else's chromebook, be sure to get their permission first.
 
 ## Something isn't installing when I type 'sudo apt install package'
-Check your spelling. Run `sudo apt update` and `sudo apt upgrade` if necessary.
+Check your spelling. Run `sudo apt update` and `sudo apt upgrade` if necessary. Otherwise, if a problem persists, go search it up.
 
 ## The time displayed is incorrect.
 To fix this, run `sudo dpkg-reconfigure tzdata`. You'll need to figure out what timezone you are in, and the timezones that correspond to your timezone in the `tzdata` data base may be different, for example, `UTC-8`, or `Pacific Standard Time`, is `America/Los_Angeles` in the `tzdata` database. Keep in mind of these things when you set the timezone. 
