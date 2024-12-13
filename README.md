@@ -23,6 +23,42 @@ You should enter a screen that says confirm returning to secure mode, and all yo
 
 If you don't want to boot into shimboot, don't do the powerwash part and hit the up arrow (so that the confirm button is highlighted) and hit enter.
 
+## Can I still use shimboot even if I switch computers?
+Yes, just follow the steps to get to the part where you plug in the flash drive. Basically just go to the official shimboot readme, watch the video up until the part where he plugs in the flash drive, then you can exit and begin using shimboot like normal.
+
+Note that booting up in developer mode causes all local data on your chromebook to be lost, so if it is someone else's chromebook, be sure to get their permission first.
+
+## Something isn't installing when I type 'sudo apt install package'
+Check your spelling. Run `sudo apt update` and `sudo apt upgrade` if necessary.
+
+## My touchpad isn't right-clicking when I use two fingers.
+By default the Debian distro on shimboot assumes the bottom right corner of your touchpad to right click. To fix this behavior, there are a series of steps you need to follow:
+
+Note: If you are using Cinnamon or Gnome though, you don't have to do all that below. You can just go into settings and switch the behavior to multiple fingers for right and middle click. On XFCE, you'll have to do that!
+
+First run `sudo apt install xinput`. After that's finished, run `xinput` to see a list of devices. You should see something like this:
+```
+⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
+⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
+⎜   ↳ GXTP7288:00 27C6:01F5 Mouse             	id=7	[slave  pointer  (2)]
+⎜   ↳ GXTP7288:00 27C6:01F5 Touchpad          	id=8	[slave  pointer  (2)]
+⎜   ↳ Elan Touchscreen                        	id=9	[slave  pointer  (2)]
+...
+```
+Find the touchpad. In my case, the touchpad is the 4th item in the list, and its `id` is `8`. Remember this number since you'll need it.
+
+Next, run `xinput list-props #`, replacing `#` with your touchpad id number. Scroll down until you get to the property that says this:
+```
+libinput Click Method Enabled (351):	1, 0
+```
+I'm not sure if the number in parentheses is the same on your shimboot, but just remember the number in paretheses. If the two numbers following the property listing say `1, 0`, then run the next piece of code. If it says `0, 1`, then yeah I'm not sure why two finger right click is not working. Probably get a new touchpad at that point.
+
+If it does say `1, 0`, like in the block of code above, then you can run the following command:
+```
+xinput set-prop # ### 0 1
+```
+Replacing the first `#` with your touchpad device `id` (mine was `8`) and the `###` with the number in parentheses from the step above.
+
 ## I want to run Roblox so I can play dress to impress and adopt me.
 There are a few caveats to this, although it is possible (tested to some degree, in actuality may or may not be). ~~First is playing these two games specifically~~, and second is that you need to have a late enough kernel version, and third, most importantly, **I have no idea if it works or not**. Anyways, to be able to run roblox on linux, you'll need something called Sober. 
 
