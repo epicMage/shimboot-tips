@@ -23,11 +23,11 @@ You should enter a screen that says confirm returning to secure mode, and all yo
 If you don't want to boot into shimboot, don't do the powerwash part and hit the up arrow (so that the confirm button is highlighted) and hit enter.
 
 ## I want to run Roblox so I can play dress to impress and adopt me.
-There are a few caveats to this, although it is possible. ~~First is playing these two games specifically~~, and second is that you need to have a late enough kernel version, and third, most importantly, **I have no idea if it works or not**. Anyways, to be able to run roblox on linux, you'll need something called Sober. 
+There are a few caveats to this, although it is possible (tested to some degree, in actuality may or may not be). ~~First is playing these two games specifically~~, and second is that you need to have a late enough kernel version, and third, most importantly, **I have no idea if it works or not**. Anyways, to be able to run roblox on linux, you'll need something called Sober. 
 
 First, run `uname -r` in terminal, if the number it spits out is smaller than `5.11`, then you can't run roblox. No alternative solutions that I know of work. This is a super important step because you will run into error if you try and run this program on an earlier kernel version.
 
-If it is greater, simply follow the instructions here: https://sober.vinegarhq.org/
+If it is greater, simply follow the instructions here: https://sober.vinegarhq.org/. Be sure to check if flatpak is installed correctly/properly.
 
 If you run into an issue like [this](https://github.com/flatpak/flatpak/issues/5944), then simply use the solution I posted at the bottom of the message chain. 
 
