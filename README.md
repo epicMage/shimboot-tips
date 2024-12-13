@@ -65,7 +65,7 @@ You can run .appimage files or .deb files. Per the Debian wiki, it is best to av
 
 To install .deb files, run `sudo apt install /path/to/deb/file.deb` and replace the last part with the path to the deb file.
 
-AppImage files are a bit weirder, you first have to go to terminal and run `chmod +x /path/to/app.appimage` and then double click the appimage file in file explorer.
+AppImage files are a bit weirder, you first have to go to terminal and run `chmod +x /path/to/app.appimage` in order to make it an executable and then double click the appimage file in file explorer.
 
 ## Can I use shimboot to create other shimboots?
 Yes, surprisingly, you can. Depending on your chromebook, you will need more than one usb port for this. You can buy a decent hub like this (it's the one I use and it works great): https://a.co/d/dGgS93k. If your chromebook has 2 or more usb ports, you can ignore this.
