@@ -107,6 +107,13 @@ xinput set-prop # ### 0 1
 ```
 Replacing the first `#` with your touchpad device `id` (mine was `8`) and the `###` with the number in parentheses from the step above. This will change your touchpad behavior to two finger right click.
 
+This change is not permanent, however, and to make it permanent, create an `.xsessionrc` file:
+```
+cat > .xsessionrc
+xinput set-prop # ### 0 1
+```
+Make sure the xinput command is the same command you ran in the previous step, replace the `#`'s accordingly. To finish, press `Ctrl+D` to exit the editor and now this command will be run on every login.
+
 ## I want to run Roblox so I can play dress to impress and adopt me.
 There are a few caveats to this, although it is possible (tested to some degree, in actuality may or may not be). ~~First is playing these two games specifically~~, and second is that you need to have a late enough kernel version, and third, most importantly, **I have no idea if it works or not**. Anyways, to be able to run roblox on linux, you'll need something called Sober. 
 
