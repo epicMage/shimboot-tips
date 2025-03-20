@@ -67,6 +67,18 @@ sudo apt install ntp
 ``` 
 and go to settings > date and time and then enable the switch saying `Use Network Time` and then change the timezone to the preferred one.
 
+## How do I change the username? I don't like my current username.
+You need to be not logged in to change username, which does pose an issue. The solution directly using shimboot is on the shimboot loading screen, instead of selecting option 3, type `r` to enter rescue shell, and type each of the following commands separately:
+```
+sudo usermod -l newUsername oldUsername
+sudo usermod -d /home/newHomeDir -m newUsername
+```
+The second one is optional, it just changes the home directory folder name to match your username. The first one is what actually changes your username.
+
+Then of course, type `exit` after you type out these commands to reboot.
+
+Note if you are on earlier versions of shimboot they might not have rescue shell.
+
 ## My touchpad isn't right-clicking when I use two fingers.
 By default the Debian distro on shimboot assumes the bottom right corner of your touchpad to right click. To fix this behavior, there are a series of steps you need to follow:
 
