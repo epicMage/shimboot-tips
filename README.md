@@ -72,7 +72,7 @@ sudo apt install ntp
 and go to settings > date and time and then enable the switch saying `Use Network Time` and then change the timezone to the preferred one.
 
 ## How do I change the username? I don't like my current username.
-You need to be not logged in to change username, which does pose an issue. The solution directly using shimboot is on the shimboot loading screen, instead of selecting option 3, type `rescue <option>` to enter rescue shell, where <option> is your boot partition, usually 5, and type each of the following commands separately:
+You need to be not logged in to change username, which does pose an issue. The solution directly using shimboot is on the shimboot loading screen, instead of selecting option 3, type `rescue <option>` to enter rescue shell, where <option> is your boot partition, usually 3, and type each of the following commands separately:
 ```
 sudo usermod -l newUsername oldUsername
 sudo usermod -d /home/newHomeDir -m newUsername
