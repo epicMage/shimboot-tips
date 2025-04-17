@@ -1,4 +1,8 @@
-# Shimboot Tips 
+# Shimboot Tips Again
+<h6>my own version of [https://github.com/Edward358-AI/shimboot-tips]. Pretty much nothing was changed, though some things are updated. I'm open to this being merged with the OG. </h6>
+
+**I refers to** https://github.com/Edward358-AI
+
 Shimboot is a super easy exploit to do, and the benefits are endless, but let's just say Linux is not the easiest of operating systems to work with. I used to have no idea how to work a Debian 12 distro when I first started but I've managed to make everything work up until now. Here are a few things that I learned along my way that I found helpful and wish I had knew when I first started using shimboot.
 
 Note: Please read and follow the instructions. I assume you have a pair of eyes while reading this. Nothing is more frustrating than a user asking a question that is so explicitly answered in the guide. So if you have a question, check the guide again, make sure you have followed all the proper steps, and if finally you find that something doesn't work you can post it in the issues on this repository or go to this discord run by ading2210: https://discord.gg/vddDp326Vs
@@ -33,7 +37,7 @@ Function keys are not mapped properly by default. I believe https://github.com/W
 
 In power management (or just power settings in general), change all settings that say "Suspend" to "Lock Screen", unless you want your computer to shut down after a light press of the power button or closing of the lid. Suspend is not supposed to shut down a Linux system, but it doesn't work on shimboot universally (see official shimboot github README).
 
-Also, chromebooks will restart with `power + refresh`. Avoid using this, as this may cause data corruption (also from ading2210). Instead, use linux's system shutdown functionality.
+Also, chrorescues will restart with `power + refresh`. Avoid using this, as this may cause data corruption (also from ading2210). Instead, use linux's system shutdown functionality. Use `reboot` to shut down your system.
 
 Another helpful tip might be that `Ctrl+Shift+V` is paste in terminal, and to copy to clipboard select text and right-click to open a menu and hit copy to copy it.
 
@@ -68,7 +72,7 @@ sudo apt install ntp
 and go to settings > date and time and then enable the switch saying `Use Network Time` and then change the timezone to the preferred one.
 
 ## How do I change the username? I don't like my current username.
-You need to be not logged in to change username, which does pose an issue. The solution directly using shimboot is on the shimboot loading screen, instead of selecting option 3, type `r` to enter rescue shell, and type each of the following commands separately:
+You need to be not logged in to change username, which does pose an issue. The solution directly using shimboot is on the shimboot loading screen, instead of selecting option 3, type `rescue <option>` to enter rescue shell, where <option> is your boot partition, usually 5, and type each of the following commands separately:
 ```
 sudo usermod -l newUsername oldUsername
 sudo usermod -d /home/newHomeDir -m newUsername
@@ -137,7 +141,7 @@ in terminal, if the number it spits out is smaller than `5.11`, then you can't r
 
 If it is greater, simply follow the instructions here: https://sober.vinegarhq.org/. Be sure to check if flatpak is installed correctly/properly.
 
-If you run into an issue like [this](https://github.com/flatpak/flatpak/issues/5944), then simply use the solution I posted at the bottom of the message chain. 
+If you run into an issue like [this](https://github.com/flatpak/flatpak/issues/5944), then simply use the solution (I)[https://github.com/Edward358-AI] posted at the bottom of the message chain. 
 
 **Note: I have not tested the validity of this program beyond this point. If you run into some other error and you have done all of the above, it might not be possible to run Roblox on shimboot after all. If it doesn't work, I don't have a fix.**
 
@@ -145,7 +149,7 @@ If you run into an issue like [this](https://github.com/flatpak/flatpak/issues/5
 You can't upgrade your kernel version, sorry. No buts, no exceptions. If you go ask ading2210, you'll get the same answer.
 
 ## How to install VPN?
-There are a lot of vpn configurations out there, but I would recommend ProtonVPN because it's decent and it's free. There are two ways you can do this: download the official app, or use OpenVPN configuration. I ran into issues using the official app, while the OpenVPN config works just fine. 
+There are a lot of VPN configurations out there, but I would recommend ProtonVPN because it's decent and it's free. There are two ways you can do this: download the official app, or use OpenVPN configuration. I ran into issues using the official app, while the OpenVPN config works just fine. 
 
 Follow these instructions to obtain ProtonVPN on shimboot (assumes you already have an account setup, so do that first): https://protonvpn.com/support/linux-openvpn/
 
@@ -160,9 +164,9 @@ to configure the desktop environment. Use arrow keys to navigate the CLI, space 
 
 Note: before restarting, run 
 ```
-sudo autoremove xfce4*
+sudo apt-get autoremove xfce4*
 ```
-to make the desktop environment you selected to be the default one.
+to make the desktop environment you selected to be the default one. This removes everything that has xfce4 at the start of it's title. 
 
 If you do select an option like Cinnamon, or GNOME, make sure you only have one of those options selected. For example, the default is XFCE, but if you want to switch to MATE, then deselect XFCE (press space on it) and use arrow keys to get to MATE and select it. 
 Do keep in mind that different desktop environments use different amounts of resources. GNOME is a very user friendly and UI-rich desktop environment, but it's generally quite slow. XFCE is the default, and it looks very basic, but it's faster. I personally use Cinnamon, which has a windows-looking UI and is a bit lighter than GNOME (but still not as light as XFCE).
@@ -199,7 +203,7 @@ chmod +x /path/to/app.appimage
 in order to make it an executable and then double click the appimage file in file explorer.
 
 ## Can I use shimboot to create other shimboots?
-Yes, surprisingly, you can. Depending on your chromebook, you will need more than one usb port for this. You can buy a decent hub like this (it's the one I use and it works great): https://a.co/d/dGgS93k. If your chromebook has 2 or more usb ports, you can ignore this.
+Yes, surprisingly, you can. Depending on your chromebook, you will need more than one usb port for this. You can buy a decent hub like this (it's the one (I)[https://github.com/Edward358-AI] use and it works great): https://a.co/d/dGgS93k. If your chromebook has 2 or more usb ports, you can ignore this.
 
 Once you have shimboot loaded, open terminal and plug in your other flash drive as well. Run 
 ```
@@ -226,7 +230,7 @@ and then unplug the drive and you're free to start booting another shimboot off 
 `dd` can also be used to create various other sorts of bootable drives (like shimboot) in this fashion. You just have to replace the path to shimboot file with the proper image that you want to burn onto the flash drive.
 
 ## How do I input in Chinese?
-Okay granted I hardly think most of you will use it, but I'm Chinese and I use it from time to time, so in case there are weird people like me out there, you can learn how to make pinyin work. The most common solution is to run 
+Okay granted I hardly think most of you will use it, but (I'm)[https://github.com/Edward358-AI] Chinese and I use it from time to time, so in case there are weird people like me out there, you can learn how to make pinyin work. The most common solution is to run 
 ```
 sudo apt install ibus-libpinyin
 ```
